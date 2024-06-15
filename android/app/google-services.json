@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "381153531345",
+    "firebase_url": "https://food-delivery-ba0f5-default-rtdb.firebaseio.com",
+    "project_id": "food-delivery-ba0f5",
+    "storage_bucket": "food-delivery-ba0f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381153531345:android:a55777338ac6c28e4abcf0",
+        "android_client_info": {
+          "package_name": "com.example.foodie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB94PwcyywgUnThXRMOw5LAINtvY0LJ_iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
