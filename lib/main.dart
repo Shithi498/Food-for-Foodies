@@ -1,3 +1,4 @@
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ void main() async {
       messagingSenderId: "381153531345",
       projectId: "food-delivery-ba0f5"));
 
+
   Get.put(ApiClient(appBaseUrl:AppConstants.BASE_URL));  // Register a new instance of ApiClient
 
   Get.put(UserRepo(apiClient: Get.find()));
@@ -54,7 +56,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
        //home: HomePage(),
-      initialRoute: RouteHelper.getSignInPage(),
+        initialRoute: RouteHelper.getSignInPage(),
+
      getPages: RouteHelper.routes,
         debugShowCheckedModeBanner: false
     );

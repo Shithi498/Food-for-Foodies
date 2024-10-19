@@ -19,7 +19,7 @@ class CartController extends GetxController {
     }
 
     if (_items.containsKey(product.id!)) {
-      // Update the quantity of an existing item
+
       int totalQuantity = _items[product.id!]!.quantity! + quantity;
       if (totalQuantity > 0) {
         _items.update(product.id!, (value) {
@@ -39,7 +39,7 @@ class CartController extends GetxController {
         Get.snackbar("Item count", "Item removed from cart!");
       }
     } else {
-      // Add a new item to the cart
+
       if (quantity > 0) {
         _items.putIfAbsent(product.id!, () {
           Get.snackbar("Item count", "Item added to cart!");

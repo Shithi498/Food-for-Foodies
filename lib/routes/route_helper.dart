@@ -6,7 +6,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 
 import '../pages/auth/sign_in_page.dart';
-import '../pages/auth/sign_up_page.dart';
+
 import '../pages/food/recommendedFoodDetail.dart';
 import '../pages/home/food_page_body.dart';
 import '../pages/home/home_page.dart';

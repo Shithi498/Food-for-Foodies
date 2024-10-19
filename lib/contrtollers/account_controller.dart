@@ -1,24 +1,3 @@
-/**import 'dart:ffi';
-
-import 'package:foodie/data/repository/user_repo.dart';
-import 'package:get/get.dart';
-
-import '../user_auth/firebase_auth_implementation/firebase_auth_services.dart';
-
-class AccountController extends GetxController{
-  static AccountController get instance => Get.find();
- final _authRepo = Get.put(FirebaseAuthServices());
-  final _userRepo = Get.put(UserRepo(apiClient: Get.find()));
-  getUserData(){
-    final email = _authRepo.auth.currentUser?.email;
-    if(email != null){
-    return _userRepo.getUserDetails(email!);
-  }else{
-      Get.snackbar("Error", "Login to continue");
-    }
-    }
-}**/
-
 import 'package:foodie/data/repository/user_repo.dart';
 import 'package:get/get.dart';
 import '../user_auth/firebase_auth_implementation/firebase_auth_services.dart';

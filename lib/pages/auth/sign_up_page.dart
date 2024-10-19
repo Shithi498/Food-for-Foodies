@@ -52,6 +52,20 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             SizedBox(height: 20),
             AppTextField(
+              textEditingController: nameController,
+              hintText: "Name",
+              icon: Icons.person,
+            ),
+
+            SizedBox(height: 8),
+            AppTextField(
+              textEditingController: phoneController,
+              hintText: "Phone",
+              icon: Icons.phone,
+            ),
+
+            SizedBox(height: 8),
+            AppTextField(
               textEditingController: emailController,
               hintText: "Email",
               icon: Icons.email,
@@ -61,18 +75,6 @@ class _SignUpPageState extends State<SignUpPage> {
               textEditingController: passwordController,
               hintText: "Password",
               icon: Icons.password,
-            ),
-            SizedBox(height: 8),
-            AppTextField(
-              textEditingController: nameController,
-              hintText: "Name",
-              icon: Icons.person,
-            ),
-            SizedBox(height: 8),
-            AppTextField(
-              textEditingController: phoneController,
-              hintText: "Phone",
-              icon: Icons.phone,
             ),
             SizedBox(height: 8),
             AppTextField(
@@ -100,7 +102,11 @@ class _SignUpPageState extends State<SignUpPage> {
             SizedBox(height: 20),
             RichText(
               text: TextSpan(
-                recognizer: TapGestureRecognizer()..onTap = () => Get.toNamed(RouteHelper.signInPage),
+                recognizer: TapGestureRecognizer()..onTap = () {
+                  print("Sign In button tapped");
+                  Get.toNamed(RouteHelper.getSignInPage());
+
+                },
                 text: "Have an account already?",
                 style: TextStyle(color: Colors.grey, fontSize: 20),
               ),
@@ -130,7 +136,8 @@ class _SignUpPageState extends State<SignUpPage> {
       showCustomSnackBar("Successful", title: "Successful");
 
       SignUpBody user = SignUpBody(
-        name: name,
+          id: FirebaseAuth.instance.currentUser!.uid,
+          name: name,
         phone: phone,
         email: email,
         password: password,

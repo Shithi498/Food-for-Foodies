@@ -17,6 +17,7 @@ class SignUpBody{
 
   Map<String,dynamic> toJson(){
     final Map<String,dynamic> data = new Map<String,dynamic>();
+
     data["f_name"]=this.name;
     data["phone"]=this.phone;
     data["email"]=this.email;

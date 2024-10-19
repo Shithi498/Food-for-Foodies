@@ -29,7 +29,8 @@ class UserRepo extends GetxController {
 
  Future<void> createUser(SignUpBody user) async {
   try {
-   await _db.collection("Users").add(user.toJson());
+  // await _db.collection("Users").add(user.toJson());
+   await _db.collection('Users').doc(user.id).set(user.toJson());
    print("User added successfully to Firestore.");
   } catch (e) {
    print("Error adding user to Firestore: $e");
@@ -38,7 +39,7 @@ class UserRepo extends GetxController {
 
  Future<SignUpBody> getUserDetails(String email) async {
   final snapshot = await _db.collection("Users").where(
-      "Email", isEqualTo: email).get();
+      "email", isEqualTo: email).get();
   final userData = snapshot.docs
       .map((e) => SignUpBody.fromSnapshot(e))
       .single;

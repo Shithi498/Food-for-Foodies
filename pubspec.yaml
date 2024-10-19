@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   firebase_core: ^2.32.0
+
   dots_indicator: ^2.1.1
   shared_preferences: ^2.0.11
 
@@ -42,12 +43,23 @@ dependencies:
   cloud_firestore: ^4.17.5
   firebase_auth: ^4.20.0
   firebase_storage: ^11.7.7
+  rename_app: ^1.6.1
 
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/taco-truck.png"
+
+
+
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
